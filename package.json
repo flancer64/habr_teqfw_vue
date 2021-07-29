@@ -1,0 +1,29 @@
+{
+  "name": "@flancer64/habr_teqfw_vue",
+  "version": "0.1.0",
+  "description": "TeqFW: ToDo List with Vue 3 & Quasar UI.",
+  "type": "module",
+  "homepage": "https://github.com/flancer64/habr_teqfw_vue",
+  "license": "AGPL-3.0-only",
+  "author": {
+    "name": "Alex Gusev",
+    "email": "alex@flancer64.com",
+    "url": "https://github.com/flancer64"
+  },
+  "repository": "github:flancer64/habr_teqfw_vue",
+  "scripts": {
+    "help": "node ./bin/tequila.mjs",
+    "http1-start": "node ./bin/tequila.mjs web-server-start",
+    "http1-stop": "node ./bin/tequila.mjs web-server-stop",
+    "start": "node ./bin/tequila.mjs http2-server-start",
+    "startup-logs": "node ./bin/tequila.mjs core-startup-logs",
+    "stop": "node ./bin/tequila.mjs http2-server-stop",
+    "version": "node ./bin/tequila.mjs core-version"
+  },
+  "dependencies": {
+    "@teqfw/http2": "github:teqfw/http2",
+    "@teqfw/i18n": "github:teqfw/i18n",
+    "@teqfw/ui-quasar": "github:teqfw/ui-quasar",
+    "@teqfw/vue": "github:teqfw/vue"
+  }
+}

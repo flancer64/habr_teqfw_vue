@@ -1,0 +1,41 @@
+{
+  "base": {
+    "title": "TeqFW: ToDo List"
+  },
+  "navig": {
+    "config": "Configuration",
+    "home": "Home"
+  },
+  "route": {
+    "home": {
+      "title": "ToDo List"
+    }
+  },
+  "widget": {
+    "cfg": {
+      "cache": {
+        "btn": "Clean",
+        "done": "cache is cleaned",
+        "title": "SW cache cleaning"
+      },
+      "lang": {
+        "lang": {
+          "en": "English",
+          "ru": "Русский"
+        },
+        "title": "Please, select language"
+      }
+    },
+    "todo": {
+      "list": {
+        "empty": "The list is empty."
+      },
+      "new": {
+        "btn": {
+          "add": "Add new ToDo"
+        },
+        "label": "New ToDo"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "background_color": "#CBE432",
+  "categories": ["demo"],
+  "description": "TeqFW Vue ToDo",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "./img/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }, {
+      "src": "./img/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "name": "TeqFW Vue ToDo",
+  "scope": "./",
+  "short_name": "TeqFW Vue ToDo",
+  "start_url": "./",
+  "theme_color": "#CBE432"
+}
