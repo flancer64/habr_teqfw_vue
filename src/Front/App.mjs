@@ -18,7 +18,7 @@ export default class Fl64_Habr_Vue_Front_App {
     #I18nLib;
     /** @type {TeqFw_Vue_Front_Lib} */
     #VueLib;
-    /** @type {TeqFw_Quasar_Front_Lib} */
+    /** @type {TeqFw_Ui_Quasar_Front_Lib} */
     #QuasarLib;
     /** @type {Fl64_Habr_Vue_Front_Layout_Base} */
     #layoutBase;
@@ -30,7 +30,7 @@ export default class Fl64_Habr_Vue_Front_App {
         this.#DEF = spec['Fl64_Habr_Vue_Front_Defaults$'];
         this.#I18nLib = spec['TeqFw_I18n_Front_Lib$'];
         this.#layoutBase = spec['Fl64_Habr_Vue_Front_Layout_Base$'];
-        this.#QuasarLib = spec['TeqFw_Quasar_Front_Lib$'];
+        this.#QuasarLib = spec['TeqFw_Ui_Quasar_Front_Lib$'];
         this.#VueLib = spec['TeqFw_Vue_Front_Lib$'];
     }
 

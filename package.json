@@ -21,9 +21,8 @@
     "version": "node ./bin/tequila.mjs core-version"
   },
   "dependencies": {
-    "@teqfw/http2": "github:teqfw/http2",
-    "@teqfw/i18n": "github:teqfw/i18n",
-    "@teqfw/ui-quasar": "github:teqfw/ui-quasar",
-    "@teqfw/vue": "github:teqfw/vue"
+    "@teqfw/http2": "*",
+    "@teqfw/i18n": "*",
+    "@teqfw/ui-quasar": "*"
   }
 }

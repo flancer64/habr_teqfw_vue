@@ -1,2 +1,3 @@
 # habr_teqfw_vue
-Demo package for TeqFW Vue app.
+
+Demo app for the Habr publication: [@teqfw/vue](https://habr.com/ru/post/569998/) (in Russian).
