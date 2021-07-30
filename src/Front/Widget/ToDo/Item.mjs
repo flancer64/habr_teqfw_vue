@@ -34,14 +34,14 @@ export default function Factory(spec) {
                push
                round
                v-if="!item.done"
-               v-on:click="(item.done=!item.done) && $emit('${EVT_UPD}');"
+               v-on:click="(item.done=!item.done); $emit('${EVT_UPD}');"
         />
         <q-btn icon="undo"
                color="primary"
                push
                round
                v-if="item.done"
-               v-on:click="(item.done=!item.done) && $emit('${EVT_UPD}');"
+               v-on:click="(item.done=!item.done); $emit('${EVT_UPD}');"
         />
         <q-btn icon="delete"
                color="primary"

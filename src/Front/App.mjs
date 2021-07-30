@@ -42,6 +42,14 @@ export default class Fl64_Habr_Vue_Front_App {
     async init() {
         // DEFINE INNER FUNCTIONS
 
+        /**
+         * Setup working languages and fallback language and add translation function to the Vue.
+         *
+         * @param {Object} app
+         * @param {TeqFw_I18n_Front_Lib} I18nLib
+         * @return {Promise<void>}
+         * @memberOf Fl64_Habr_Vue_Front_App.init
+         */
         async function initI18n(app, I18nLib) {
             await I18nLib.init(['en', 'ru'], 'en');
             const appProps = app.config.globalProperties;
