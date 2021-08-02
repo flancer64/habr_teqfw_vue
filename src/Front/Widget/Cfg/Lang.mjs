@@ -21,8 +21,6 @@ export default function Factory(spec) {
     const DEF = spec['Fl64_Habr_Vue_Front_Defaults$'];
     /** @type {TeqFw_I18n_Front_Lib} */
     const i18n = spec['TeqFw_I18n_Front_Lib$'];
-    /** @type {Fl64_Habr_Vue_Front_Layout_Base.Factory} */
-    const BaseLayoutFactory = spec['Fl64_Habr_Vue_Front_Layout_Base#'];
 
     // DEFINE WORKING VARS
     const template = `
@@ -34,7 +32,6 @@ export default function Factory(spec) {
                 inline
                 v-model="fldLang"
         ></q-option-group>
-        <div>Lang: {{${DEF.DI_LANG_COUNT}}}</div>
     </q-card-section>
 </q-card>
 `;

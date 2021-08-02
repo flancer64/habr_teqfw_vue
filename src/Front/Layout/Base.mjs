@@ -28,7 +28,7 @@ function Factory(spec) {
     const ref = VueLib.getVue().ref;
     // use ':key' to refresh UI (https://v3.vuejs.org/api/special-attributes.html#key)
     const template = `
-<q-layout view="hHh lpR fFf" :key="${DEF.DI_LANG_COUNT}">
+<q-layout view="hHh lpR fFf" :key="${DEF.DI_LANG_COUNT}.value">
     <q-header elevated class="bg-primary text-white">
         <q-toolbar>
             <q-avatar v-on:click="$router.push('${DEF.ROUTE_HOME}')">
@@ -48,7 +48,6 @@ function Factory(spec) {
     <q-page-container>
         <slot/>
     </q-page-container>
-    <div>Base: {{${DEF.DI_LANG_COUNT}}}</div>
 </q-layout>
 `;
 

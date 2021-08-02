@@ -99,9 +99,7 @@ export default class Fl64_Habr_Vue_Front_App {
         this.#root = Vue.createApp({
             teq: {package: this.#DEF.NAME},
             name: NS,
-            template: `
-              <router-view/>
-              <div style="position: absolute; bottom: 10vh;">App: {{ counter }}</div>`,
+            template: '<router-view/>',
             setup() {
                 const counter = Vue.ref(1);
                 Vue.provide(DI_KEY, counter);
