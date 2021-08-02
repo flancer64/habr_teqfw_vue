@@ -21,11 +21,10 @@ function Factory(spec) {
     const VueLib = spec['TeqFw_Vue_Front_Lib$'];
     /** @type {Fl64_Habr_Vue_Front_Layout_Navigator.vueCompTmpl} */
     const navigator = spec['Fl64_Habr_Vue_Front_Layout_Navigator$'];
-
+    /** @type {Fl64_Habr_Vue_Front_Model_Lang} */
+    const modLang = spec['Fl64_Habr_Vue_Front_Model_Lang$'];
 
     // DEFINE WORKING VARS
-    /** @type {Function} */
-    const ref = VueLib.getVue().ref;
     const template = `
 <q-layout view="hHh lpR fFf" :key="langChange">
 
@@ -75,10 +74,7 @@ function Factory(spec) {
             }
         },
         setup() {
-            // key to refresh UI on language change
-            const langChange = ref(0);
-            Factory.langChangeCounter = langChange; // pin counter to the class (dirty hack)
-            return {langChange};
+            return {langChange: modLang.getData()};
         }
     };
 }

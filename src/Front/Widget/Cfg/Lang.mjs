@@ -21,8 +21,8 @@ export default function Factory(spec) {
     const DEF = spec['Fl64_Habr_Vue_Front_Defaults$'];
     /** @type {TeqFw_I18n_Front_Lib} */
     const i18n = spec['TeqFw_I18n_Front_Lib$'];
-    /** @type {Fl64_Habr_Vue_Front_Layout_Base.Factory} */
-    const BaseLayoutFactory = spec['Fl64_Habr_Vue_Front_Layout_Base#'];
+    /** @type {Fl64_Habr_Vue_Front_Model_Lang} */
+    const modLang = spec['Fl64_Habr_Vue_Front_Model_Lang$'];
 
     // DEFINE WORKING VARS
     const template = `
@@ -67,7 +67,8 @@ export default function Factory(spec) {
                 if (old !== null && current !== old && (current === LANG_RU || current === LANG_EN)) {
                     i18n.getI18n().changeLanguage(current);
                     // increment lang counter to refresh all components starting from base layout
-                    BaseLayoutFactory.langChangeCounter.value++;
+                    const lang = modLang.getData();
+                    lang.value++;
                 }
             }
         },
