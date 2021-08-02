@@ -34,6 +34,7 @@ export default function Factory(spec) {
                 inline
                 v-model="fldLang"
         ></q-option-group>
+        <div>Lang: {{${DEF.DI_LANG_COUNT}}}</div>
     </q-card-section>
 </q-card>
 `;
@@ -67,13 +68,14 @@ export default function Factory(spec) {
                 if (old !== null && current !== old && (current === LANG_RU || current === LANG_EN)) {
                     i18n.getI18n().changeLanguage(current);
                     // increment lang counter to refresh all components starting from base layout
-                    BaseLayoutFactory.langChangeCounter.value++;
+                    this[DEF.DI_LANG_COUNT].value += 1;
                 }
             }
         },
         mounted() {
             this.fldLang = i18n.getLang();
         },
+        inject: [DEF.DI_LANG_COUNT],
     };
 }
 // to get namespace on debug

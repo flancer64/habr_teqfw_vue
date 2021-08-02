@@ -26,9 +26,9 @@ function Factory(spec) {
     // DEFINE WORKING VARS
     /** @type {Function} */
     const ref = VueLib.getVue().ref;
+    // use ':key' to refresh UI (https://v3.vuejs.org/api/special-attributes.html#key)
     const template = `
-<q-layout view="hHh lpR fFf" :key="langChange">
-
+<q-layout view="hHh lpR fFf" :key="${DEF.DI_LANG_COUNT}">
     <q-header elevated class="bg-primary text-white">
         <q-toolbar>
             <q-avatar v-on:click="$router.push('${DEF.ROUTE_HOME}')">
@@ -48,7 +48,7 @@ function Factory(spec) {
     <q-page-container>
         <slot/>
     </q-page-container>
-
+    <div>Base: {{${DEF.DI_LANG_COUNT}}}</div>
 </q-layout>
 `;
 
@@ -72,14 +72,9 @@ function Factory(spec) {
         methods: {
             toggleMenu() {
                 this.menuOpen = !this.menuOpen;
-            }
+            },
         },
-        setup() {
-            // key to refresh UI on language change
-            const langChange = ref(0);
-            Factory.langChangeCounter = langChange; // pin counter to the class (dirty hack)
-            return {langChange};
-        }
+        inject: [DEF.DI_LANG_COUNT],
     };
 }
 

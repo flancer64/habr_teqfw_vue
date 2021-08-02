@@ -93,12 +93,20 @@ export default class Fl64_Habr_Vue_Front_App {
         // MAIN FUNCTIONALITY
 
         // create root vue component
-        /** @type {{createApp}} */
+        /** @type {{createApp, ref, provide}} */
         const Vue = this.#VueLib.getVue();
+        const DI_KEY = this.#DEF.DI_LANG_COUNT;
         this.#root = Vue.createApp({
             teq: {package: this.#DEF.NAME},
             name: NS,
-            template: '<router-view/>',
+            template: `
+              <router-view/>
+              <div style="position: absolute; bottom: 10vh;">App: {{ counter }}</div>`,
+            setup() {
+                const counter = Vue.ref(1);
+                Vue.provide(DI_KEY, counter);
+                return {counter}
+            },
         });
         // ... and add global available components
         this.#root.component('LayoutBase', this.#layoutBase);
