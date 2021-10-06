@@ -17,8 +17,6 @@ function Factory(spec) {
     // EXTRACT DEPS
     /** @type {Fl64_Habr_Vue_Front_Defaults} */
     const DEF = spec['Fl64_Habr_Vue_Front_Defaults$'];
-    /** @type {TeqFw_Vue_Front_Lib} */
-    const VueLib = spec['TeqFw_Vue_Front_Lib$'];
     /** @type {Fl64_Habr_Vue_Front_Layout_Navigator.vueCompTmpl} */
     const navigator = spec['Fl64_Habr_Vue_Front_Layout_Navigator$'];
     /** @type {Fl64_Habr_Vue_Front_Model_Lang} */
