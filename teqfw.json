@@ -1,5 +1,5 @@
 {
-  "di": {
+  "@teqfw/di": {
     "autoload": {
       "ns": "Fl64_Habr_Vue",
       "path": "./src"

@@ -13,16 +13,18 @@
   "repository": "github:flancer64/habr_teqfw_vue",
   "scripts": {
     "help": "node ./bin/tequila.mjs",
-    "http1-start": "node ./bin/tequila.mjs web-server-start",
-    "http1-stop": "node ./bin/tequila.mjs web-server-stop",
-    "start": "node ./bin/tequila.mjs http2-server-start",
+    "http1-start": "node ./bin/tequila.mjs web-server-start -1",
+    "start": "node ./bin/tequila.mjs web-server-start",
     "startup-logs": "node ./bin/tequila.mjs core-startup-logs",
-    "stop": "node ./bin/tequila.mjs http2-server-stop",
+    "stop": "node ./bin/tequila.mjs web-server-stop",
     "version": "node ./bin/tequila.mjs core-version"
   },
   "dependencies": {
-    "@teqfw/http2": "*",
-    "@teqfw/i18n": "*",
-    "@teqfw/ui-quasar": "*"
+    "@teqfw/core": "github:teqfw/core",
+    "@teqfw/di": "github:teqfw/di",
+    "@teqfw/i18n": "github:teqfw/i18n",
+    "@teqfw/ui-quasar": "github:teqfw/ui-quasar",
+    "@teqfw/vue": "github:teqfw/vue",
+    "@teqfw/web": "github:teqfw/web"
   }
 }
