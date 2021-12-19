@@ -1,7 +1,7 @@
 {
   "name": "@flancer64/habr_teqfw_vue",
   "version": "0.1.0",
-  "description": "TeqFW: ToDo List with Vue 3 & Quasar UI.",
+  "description": "TeqFW: ToDo List with Vue 3 & Quasar UI for Google Cloud.",
   "type": "module",
   "homepage": "https://github.com/flancer64/habr_teqfw_vue",
   "license": "AGPL-3.0-only",
@@ -13,8 +13,9 @@
   "repository": "github:flancer64/habr_teqfw_vue",
   "scripts": {
     "help": "node ./bin/tequila.mjs",
-    "http1-start": "node ./bin/tequila.mjs web-server-start -1",
-    "start": "node ./bin/tequila.mjs web-server-start",
+    "http1": "node ./bin/tequila.mjs web-server-start -1 -p 8080",
+    "http2": "node ./bin/tequila.mjs web-server-start -p 8080",
+    "start": "node ./bin/tequila.mjs web-server-start -1 -p 8080",
     "startup-logs": "node ./bin/tequila.mjs core-startup-logs",
     "stop": "node ./bin/tequila.mjs web-server-stop",
     "version": "node ./bin/tequila.mjs core-version"

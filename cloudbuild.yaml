@@ -1,0 +1,32 @@
+# Access the id_github file from Secret Manager, and setup SSH
+steps:
+  - name: 'gcr.io/cloud-builders/git'
+    secretEnv: ['SSH_KEY']
+    entrypoint: 'bash'
+    args:
+      - -c
+      - |
+        echo "$$SSH_KEY" >> /root/.ssh/id_rsa
+        chmod 400 /root/.ssh/id_rsa
+        cp known_hosts.github /root/.ssh/known_hosts
+    volumes:
+      - name: 'ssh'
+        path: /root/.ssh
+
+  - name: node
+    entrypoint: npm
+    args: ['install']
+    volumes:
+      - name: 'ssh'
+        path: /root/.ssh
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args: ['-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy']
+
+timeout: '1600s'
+
+availableSecrets:
+  secretManager:
+    - versionName: projects/todo-http1/secrets/ssh-key-github/versions/latest
+      env: 'SSH_KEY'
